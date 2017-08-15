@@ -6,10 +6,10 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var article one = {
+var articleone = {
     title: 'Article one',
     heading: 'Article one',
-    content:
+    content:`
               <p>
                   this is the content of my first article.this is the content of my first 
                       article.this is the content of my first article.this is the content of 
@@ -35,7 +35,7 @@ var article one = {
                       .this is the content of my first article.this is the content of my 
                       first article.this is the content of my first article.this is the 
                       content of my first article.this is the content of my first article.
-              </p>
+              </p>`
          
     
     
@@ -43,12 +43,12 @@ var article one = {
     
 };
 
-function createTemplate [data]={
+function createTemplate (data) {
     var title= data.title;
     var heading =data.heading;
     var content = data.content;
 
-var htmlTemplate= '
+var htmlTemplate= `
     
     <html>
     <head>
@@ -78,17 +78,17 @@ var htmlTemplate= '
     </body>
   </html>
 
-      ';
+      `;
        return htmlTemplate;
     
     
-};
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function (req, res){ 
-res.send(createTemplate(article one));
+res.send(createTemplate(articleone));
     
 });
 
