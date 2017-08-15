@@ -53,7 +53,7 @@ var htmlTemplate= `
     <html>
     <head>
         <title>
-            $[title]
+            ${title}
         </title>
    
          <link href="/ui/style.css" rel="stylesheet" />
@@ -67,11 +67,11 @@ var htmlTemplate= `
         </div>
         <div>
             <h3>
-                $[heading]
+                ${heading}
             </h3>
         </div>
           <div>
-              $[content]
+              ${content}
           </div>
         </div>  
         
