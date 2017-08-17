@@ -132,9 +132,6 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/ui/favicon.ico', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
-});
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
