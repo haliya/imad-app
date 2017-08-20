@@ -22,7 +22,7 @@ request.onreadystatechange = function (){
 };
 // render the response and store it
 
-request.open('GET', 'http://ahaliya92.imad.hasura-app.io',true);
+request.open('GET', 'http://ahaliya92.imad.hasura-app.io/counter',true);
 request.send(null);
 
 
